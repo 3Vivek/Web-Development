@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="res">
+
+    </h1>
+    <button onclick="date()">Dates</button>
+    <button onclick="Year()">Year</button>
+    <button onclick="Month()">Months</button>
+    <button onclick="hours()">Hour</button>
+    <button onclick="todate()">Today Date</button>
+    <button onclick="min()">Minute</button>
+    <button onclick="time()">Time</button>
+    <button onclick="sec()">Second</button>
+
+</body>
+<script>
+    var date=new Date();
+    function date(){
+        document.getElementById('res').innerHTML=date;
+    }
+    function Year(){
+        document.getElementById('res').innerHTML=date.getFullYear();
+    }
+    function Month(){
+        document.getElementById('res').innerHTML=date.getMonth()+1;
+    }
+    function hours(){
+        document.getElementById('res').innerHTML=date.getHours();
+    }
+    function todate(){
+        document.getElementById('res').innerHTML=date.getDate();
+    }
+    function min(){
+        document.getElementById('res').innerHTML=date.getMinutes();
+    }
+    function time(){
+        document.getElementById('res').innerHTML=date.getTime();
+    }
+    function sec(){
+        document.getElementById('res').innerHTML=date.getSeconds();
+    }
+</script>
+</html>
