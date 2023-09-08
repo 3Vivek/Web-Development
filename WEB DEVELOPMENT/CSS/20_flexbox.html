@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: violet;
+            border: 5px solid black;
+            height: 1200px;
+            padding: 2px;
+            margin: 2px;
+            display: flex;
+            flex-direction: row; /* row column row-reverse column-reverse jagah le lega*/
+            
+            /*squeeze krega agr compress kre to aur niche aa jaega responsive me kaam aata */
+            /* flex-wrap: wrap;  */
+            justify-content:start; /*main axis ke according center end aur start pr place krega */
+
+            align-items: start; /*cross axis ke according center end aur start pr place krega*/
+
+            align-content: start; /* jab stretch hoga tb element niche jaega gap ho jaega usi ko kam krta h ye*/
+        }
+        .box{
+            height: 100px;
+            width: 100px;
+            border: 2px solid red;
+            margin: 2px;
+            padding: 2px;
+        }
+        #box1{
+            background-color: yellowgreen;
+            order: 500;
+            align-self: center;
+            
+            /* bakio ke comp me tej shrink hoga*/
+            /* flex-shrink: 4;  */
+        }
+        #box2{
+            background-color: slategray;
+            /* flex-basis: 400px;  */
+            /* width set krta h elem ka*/
+            align-self: flex-start;
+        }
+        #box3{
+            background-color: blueviolet;
+            /* order:-1;  */
+            /* element ka order btata h*/
+            align-self: first baseline;
+        }
+        #box4{
+            background-color: peru;
+            /* flex-grow: 4; */
+            /* bakio ke comp me tej grow krega*/
+            align-self: flex-end;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1">BOX 1</div>
+        <div class="box" id="box2">BOX 2</div>
+        <div class="box" id="box3">BOX 3</div>
+        <div class="box" id="box4">BOX 4</div>
+
+    </div>
+</body>
+</html>

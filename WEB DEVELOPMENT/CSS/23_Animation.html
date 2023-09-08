@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 100vw;
+            height: 100vh;
+            background-color: violet;
+            border: 5px solid firebrick;
+        }
+        .box{
+            width: 300px;
+            height: 80px;
+            background-color: turquoise;
+            border: 3px solid rgb(22, 36, 9);
+            border-radius: 10px;
+            margin: 10px;
+            position: relative;
+            animation: rightMovement;
+            /* animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-delay: 2s;
+            animation-timing-function: linear; */
+        
+            /* animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);     */
+
+            /* animation-direction: alternate; andr bahr */
+
+
+            /*Shorthand*/
+            animation: 5s linear 1s infinite alternate none running rightMovement;
+
+
+        }
+        @keyframes rightMovement {
+                from{
+                    top: 0;
+                    left: 0;
+                }
+                to{
+                    top: 0;
+                    left: 1200px;
+                }
+        }
+        .container p{
+            font-style: italic;
+            font-size: 20px;
+            padding: 20px;
+        }
+
+        .box2{
+            width: 300px;
+            height: 80px;
+            background-color: turquoise;
+            border: 3px solid rgb(22, 36, 9);
+            border-radius: 10px;
+            margin: 10px;
+            position: relative;
+           
+            animation: 5s ease-in 1s infinite alternate none running leftMovement;
+
+        }
+        @keyframes leftMovement {
+                from{
+                    top: 475px;
+                    left: 1200px;
+                }
+                to{
+                    top: 475px;
+                    left: 0px;
+                }
+        }
+        .circle{
+            width: 100px;
+            height: 100px;
+            background-color: turquoise;
+            border: 3px solid rgb(22, 36, 9);
+            border-radius: 50px;
+            margin: 10px;
+            position: relative;
+            top: 30%;
+            left: 40%;
+            animation: 10s ease-in-out 1s infinite alternate-reverse none running circle;
+
+        }
+        @keyframes circle {
+                0%{
+                    top: 1%;
+                    left: 5%;
+                }
+                30%{
+                    top: 5%;
+                    left: 90%;
+                }
+                60%{
+                    top: 50%;
+                    left: 10%;
+                }
+                100%{
+                    top: 55%;
+                    left: 90%;
+                }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <p>Player 1</p> 
+        </div>
+        <div class="circle">
+            <p>Ball</p>
+        </div>
+        <div class="box2">
+            <p>Player 2</p>
+        </div>
+    </div>
+</body>
+</html>
